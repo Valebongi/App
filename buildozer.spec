@@ -22,6 +22,9 @@ version = 1.0
 # comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,kivy,kivymd,pillow
 
+# (str) python-for-android specific settings
+p4a.local_recipes = ./p4a-recipes
+
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/data/presplash.png
 
