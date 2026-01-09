@@ -67,7 +67,16 @@ jobs:
     - name: Build APK with Buildozer
       timeout-minutes: 45
       run: |
+        # Clean conflicting Android environment variables
+        unset ANDROID_HOME
+        unset ANDROID_NDK_HOME
+        unset ANDROID_NDK_ROOT
+        unset ANDROID_NDK
+        unset ANDROID_NDK_LATEST_HOME
+        
+        # Set only buildozer's SDK
         export ANDROID_SDK_ROOT=$HOME/.buildozer/android/platform/android-sdk
+        
         buildozer -v android debug
       env:
         GRADLE_OPTS: "-Xmx2048m -Dorg.gradle.jvmargs=-Xmx2048m"
