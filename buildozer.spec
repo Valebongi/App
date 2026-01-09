@@ -46,6 +46,9 @@ android.minapi = 21
 # (str) Android NDK version to use
 android.ndk = 25b
 
+# (str) Android SDK build-tools version
+android.sdk_buildtools = 33.0.0
+
 # (bool) Enable AndroidX support
 android.enable_androidx = True
 
